@@ -46,7 +46,7 @@ export default function Navigation() {
         `}
         style={{ paddingLeft: 'clamp(2rem, 5vw, 6rem)', paddingRight: 'clamp(2rem, 5vw, 6rem)' }}
       >
-        <div className="w-full max-w-[1600px] mx-auto h-28 flex items-center justify-between">
+        <div className="w-full h-28 flex items-center justify-between">
           {/* Logo */}
           <Link
             href="/"
@@ -76,8 +76,8 @@ export default function Navigation() {
                 key={link.href}
                 href={link.href}
                 className={`
-                  relative px-8 py-4 text-sm font-light tracking-wide transition-all duration-300 rounded-lg cursor-pointer group
-                  hover:bg-white/10
+                  relative px-3 py-1.5 text-sm font-light tracking-wide transition-all duration-300 rounded-md cursor-pointer group
+                  hover:bg-white/5
                   ${pathname === link.href
                     ? 'text-accent'
                     : 'text-[rgba(255,255,255,0.5)] hover:text-[rgba(255,255,255,0.9)]'
@@ -88,11 +88,11 @@ export default function Navigation() {
                 {pathname === link.href ? (
                   <motion.div
                     layoutId="nav-indicator"
-                    className="absolute bottom-1 left-6 right-6 h-px bg-accent"
+                    className="absolute bottom-0 left-3 right-3 h-px bg-accent"
                     transition={{ type: 'spring', bounce: 0.2, duration: 0.6 }}
                   />
                 ) : (
-                  <div className="absolute bottom-1 left-6 right-6 h-px bg-white/30 scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left" />
+                  <div className="absolute bottom-0 left-3 right-3 h-px bg-white/30 scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left" />
                 )}
               </Link>
             ))}
