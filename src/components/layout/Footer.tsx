@@ -23,7 +23,14 @@ const EmailIcon = () => (
   </svg>
 );
 
+const SubstackIcon = () => (
+  <svg viewBox="0 0 24 24" fill="currentColor" width="16" height="16">
+    <path d="M22.539 8.242H1.46V5.406h21.08v2.836zM1.46 10.812V24L12 18.11 22.54 24V10.812H1.46zM22.54 0H1.46v2.836h21.08V0z"/>
+  </svg>
+);
+
 const SOCIAL_LINKS = [
+  { label: 'Substack', href: 'https://substack.com/@genrevo', icon: <SubstackIcon /> },
   { label: 'GitHub', href: 'https://github.com/GenRevo89', icon: <GithubIcon /> },
   { label: 'LinkedIn', href: 'https://www.linkedin.com/in/krishna-patel-89039120/', icon: <LinkedinIcon /> },
   { label: 'Email', href: 'mailto:krishnapatel@mac.com', icon: <EmailIcon /> },
